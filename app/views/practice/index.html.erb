@@ -1,0 +1,21 @@
+<h1>Choose a Color!</h1>
+<% if @name%>
+<p>
+Hi <%=@name%>!!
+</p>
+
+<p>
+    <%= link_to "paint it Red", about_path(color: "red") %>
+</p>
+
+<p>
+    <%= link_to "print it Blue", about_path(color: "blue") %>
+</p>
+
+<p>
+    <%= link_to "paint it Green", about_path(color: "green") %>
+</p>
+
+<p>
+    <%= link_to "paint it Yellow", about_path(color: "yellow") %>
+</p>

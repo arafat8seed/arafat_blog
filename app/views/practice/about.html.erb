@@ -1,0 +1,14 @@
+<style>
+  .color-me-in {
+    background-color: <%= @color %>;
+    color: white;
+  }
+</style>
+
+<div class="color-me-in">
+  <%=@color%>BOX ACTIVATED!
+</div>
+<%= from_tag index_path do%>
+<% text_field_tag :name,nil, placeholder: 'Enter your name' %>
+<% submit_tag 'Go!' %>
+<% end %>
