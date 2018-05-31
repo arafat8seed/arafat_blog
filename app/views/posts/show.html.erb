@@ -1,5 +1,4 @@
 <p id="notice"><%= notice %></p>
-
 <p>
   <strong>Title:</strong>
   <%= @post.title %>
@@ -7,7 +6,7 @@
 
 <p>
   <strong>Author:</strong>
-  <%= @post.author %>
+  <%= @post.user.username %>
 </p>
 
 <p>
@@ -20,7 +19,7 @@
 
 <% render 'comments/from', comment: Comment.new%>
 
-<% @post.comments.each |comment|%>
+<% @post.comments.each do |comment|%>
 <div class="well">
   <h5><% comment.author%> says...</h5>
   <p><% comment.comment_entry%>
